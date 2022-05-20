@@ -10,4 +10,4 @@ Extragalactic Kinematics is a repository for applying a kernel in velocity space
 
 Example of the test_spectrum test_spectrum.spec successively broadened. The code is not optimized for cpu speed, but it shows the principle of how it works.
 
-<img src=https://github.com/neutrinomuon/ExtragalacticKinematics/blob/main/KinematicalBroadening.png width="60%">
+<img src=https://github.com/neutrinomuon/ExtragalacticKinematics/blob/main/KinematicalBroadening.png width="90%">
