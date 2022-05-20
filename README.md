@@ -4,7 +4,7 @@ Extragalactic Kinematics is a repository for applying a kernel in velocity space
 
 # Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
 
-<img src=https://github.com/neutrinomuon/ExtragalacticKinematics/blob/main/cc_logo.png width="50%"></nobr>
+<img src=https://github.com/neutrinomuon/ExtragalacticKinematics/blob/main/CC_logo.png width="50%"></nobr>
 
 <a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>Creative Commons Attribution-NonCommercial-NoDerivs (CC-BY-NC-ND)</a>
 
