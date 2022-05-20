@@ -10,8 +10,6 @@ applying a kernel in velocity space to models in order to obtain the respective 
 
 Version: v01 beta
 
-PYTHON : Python compatibility using f2py revised. Better usage  with numpy.  
-
 Written: Jean Michel Gomes © Copyright
 Created on un Oct 15 10:00:52 WEST 2006
 """
