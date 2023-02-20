@@ -1,4 +1,5 @@
 # Kinematical broadnening
+email: antineutrinomuon@gmail.com, jean@astro.up.pt
 
 © Copyright ®
 
@@ -9,6 +10,8 @@ J.G. - Jean Gomes
 ![python3](https://img.shields.io/pypi/pyversions/pyfluxconserving)
 
 <hr>
+
+## Description
 
 RESUME: Extragalactic Kinematics is a repository for applying a kernel in velocity space to models in order to obtain the respective broadened model. This is a python code that performs kinematical broadening of a spectrum by applying a kernel in velocity space to a model, and obtaining the respective broadened model. The code defines the function GaussianConvolution, which performs the convolution with a Gaussian kernel. The kernel is generated using a certain number of points, which can be set with the Ni_Gauss parameter. The code then reads in a test spectrum from a file, interpolates it onto a set of equally spaced wavelength values, and then plots the original and broadened spectra for different velocity dispersions.
 
