@@ -17,7 +17,71 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.pylab as pl
 
-def GaussianConvolution( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41, fill_val=0.0, verbosity=0 ):
+import numpy as np
+
+def GaussianConvolution(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41, fill_val=0.0, verbosity=0):
+    Pi = np.pi
+    c = 2.997925 * 100000.0
+
+    IsKeepOn = 1
+
+    Nlambdao = np.size(lambda_o)
+    Nlambdas = np.size(lambda_s)
+    fluxes_s = np.zeros([Nlambdas])
+
+    #if Ni_Gauss < vd_sigma / 1.0:
+    #    print('[GaussianConvolution] too few Ni_Gauss points => {0:}'.format(Ni_Gauss))
+    #    IsKeepOn = 0
+    #    return fluxes_s, IsKeepOn
+
+    N_sigmas = 6
+    ullambda = -np.float64(N_sigmas)
+    uulambda = +np.float64(N_sigmas)
+    dulambda = (uulambda - ullambda) / np.float64(Ni_Gauss - 1)
+
+    dlambdao = np.gradient(lambda_o)
+    v_0_gals = vc0_gals / c
+
+    if v_0_gals != 0.0:
+        lamb_min = lambda_o[0] + lambda_o[0] * (vd_sigma / c + v_0_gals)
+        lamb_max = lambda_o[Nlambdao - 1] - lambda_o[Nlambdao - 1] * (vd_sigma / c)
+    else:
+        lamb_min = lambda_o[0] + lambda_o[0] * (vd_sigma / c)
+        lamb_max = lambda_o[Nlambdao - 1] - lambda_o[Nlambdao - 1] * (vd_sigma / c + v_0_gals)
+
+    for ilambdas in range(Nlambdas):
+
+        if lamb_min < lambda_s[ilambdas] < lamb_max:
+
+            sumfluxg = 0.0
+            u = ullambda
+            while u <= uulambda:
+
+                v = vc0_gals + abs(vd_sigma) * u
+                l = lambda_s[ilambdas] / (1.0 + v / c)
+
+                if l < lambda_o[0]:
+                    f = fluxes_o[0]
+                elif l > lambda_o[Nlambdao - 1]:
+                    f = fluxes_o[Nlambdao - 1]
+                else:
+                    N_indice = np.searchsorted(lambda_o, l, side='right') - 1
+                    a = (fluxes_o[N_indice + 1] - fluxes_o[N_indice]) / (lambda_o[N_indice + 1] - lambda_o[N_indice])
+                    b = (fluxes_o[N_indice] - a * lambda_o[N_indice])
+                    f = a * l + b
+
+                sumfluxg = sumfluxg + f * np.exp(-(u ** 2 / 2.0))
+                u = u + dulambda
+
+            fluxes_s[ilambdas] = sumfluxg * dulambda / np.sqrt(2.0 * Pi)
+
+        else:
+            fluxes_s[ilambdas] = fill_val
+
+    return fluxes_s, IsKeepOn
+
+
+def GaussianConvolution_OLD( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41, fill_val=0.0, verbosity=0 ):
     Pi=3.141592653589793
     c=2.997925*100000.0
     
