@@ -6,7 +6,7 @@ J.G. - Jean Gomes
 
 <hr>
 
-[![python3](https://img.shields.io/pypi/pyversions/pyfluxconserving)
+![python3](https://img.shields.io/pypi/pyversions/pyfluxconserving)
 
 <hr>
 
