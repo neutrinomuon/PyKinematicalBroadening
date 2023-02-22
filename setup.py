@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup( name='PyKinematicalBroadening',
-       version='0.0.1',
+       version='0.0.2',
        description='Kinematical broadening in velocity space (km/s)',
        long_description=long_description,      # Long description read from the the readme file
        long_description_content_type="text/markdown",
