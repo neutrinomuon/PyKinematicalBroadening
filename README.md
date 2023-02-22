@@ -19,6 +19,33 @@ In detail, the GaussianConvolution function convolves a given input spectrum flu
 
 The main code reads in a test spectrum from a file and interpolates it onto a set of equally spaced wavelength values. It then loops over different velocity dispersions and calls 'broadening' for each one, broadening the spectrum and plotting the results.
 
+You can easily install <a href=https://pypi.org/project/PyKinematicalBroadening/>PyKinematicalBroadening</a> by using pip - <a href='https://pypi.org/'>PyPI - The Python Package Index</a>:
+<pre>
+<code>
+pip install PyKinematicalBroadening
+</code>
+</pre>
+or by using a generated conda repository <a href='https://anaconda.org/neutrinomuon/PyKinematicalBroadening'>https://anaconda.org/neutrinomuon/PyKinematicalBroadening</a>:
+
+[![badgetanaconda](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/version.svg)](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/version.svg)
+[![badgetreleasedate](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/latest_release_date.svg)](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/latest_release_date.svg)
+[![badgetplatforms](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/platforms.svg
+)](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/platforms.svg)
+<pre>
+<code>
+conda install -c neutrinomuon PyKinematicalBroadening
+</code>
+</pre>
+OBS.: Linux, OS-X ad Windows pre-compilations available in conda.
+
+You can also clone the repository and install by yourself in your machine:
+<pre>
+<code>
+git clone https://github.com/neutrinomuon/PyKinematicalBroadening
+python setup.py install
+</code>
+</pre>
+
 ## Example
 
 Example of the test_spectrum test_spectrum.spec successively broadened by different velocity dispersions in [km/s]. The code is not optimized for cpu speed, but it shows the principle of how it works.

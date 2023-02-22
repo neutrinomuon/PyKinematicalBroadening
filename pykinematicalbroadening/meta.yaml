@@ -1,0 +1,38 @@
+{% set name = "PyKinematicalBroadening" %}
+{% set version = "0.0.4" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 8715bd52b2b0b0820803e15bf8ae8567f7f5fe68e82611d60bfbe0a433204aba
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - matplotlib
+    - numpy>=1.21.5
+    - pip
+    - python
+  run:
+    - matplotlib
+    - numpy>=1.21.5
+    - python
+
+test:
+  imports:
+    - PyKinematicalBroadening
+
+about:
+  home: "https://github.com/neutrinomuon/PyKinematicalBroadening"
+  license_file: 'LICENSE.txt'
+  summary: "Kinematical broadening in velocity space (km/s)"
+
+extra:
+  recipe-maintainers:
+    - neutrinomuon
