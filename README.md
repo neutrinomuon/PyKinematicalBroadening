@@ -19,12 +19,16 @@ In detail, the GaussianConvolution function convolves a given input spectrum flu
 
 The main code reads in a test spectrum from a file and interpolates it onto a set of equally spaced wavelength values. It then loops over different velocity dispersions and calls GaussianConvolution for each one, broadening the spectrum and plotting the results.
 
-## Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
-
-<img src=https://github.com/neutrinomuon/ExtragalacticKinematics/blob/main/CC_logo.png width="10%"></nobr>
-
-<a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>Creative Commons Attribution-NonCommercial-NoDerivs (CC-BY-NC-ND)</a>
+## Example
 
 Example of the test_spectrum test_spectrum.spec successively broadened by different velocity dispersions in [km/s]. The code is not optimized for cpu speed, but it shows the principle of how it works.
 
-<img src=https://github.com/neutrinomuon/ExtragalacticKinematics/blob/main/KinematicalBroadening.png width="90%">
+<img src="https://github.com/neutrinomuon/ExtragalacticKinematics/blob/main/figures/KinematicalBroadening.png" width="90%">
+
+## Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
+
+<img src="https://github.com/neutrinomuon/ExtragalacticKinematics/blob/main/figures/CC_logo.png" width="10%">
+</nobr>
+
+<a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>Creative Commons Attribution-NonCommercial-NoDerivs (CC-BY-NC-ND)</a>
+
