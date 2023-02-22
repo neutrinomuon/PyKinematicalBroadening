@@ -1,15 +1,15 @@
 Metadata-Version: 2.1
-Name: Pykinematicalbroadening
+Name: PyKinematicalBroadening
 Version: 0.0.1
-Summary: Pykinematical broadening in velocity space
-Home-page: https://github.com/neutrinomuon/ExtragalacticKinematics
+Summary: Kinematical broadening in velocity space (km/s)
+Home-page: https://github.com/neutrinomuon/PyKinematicalBroadening
 Author: Jean Gomes
 Author-email: antineutrinomuon@gmail.com
 Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: OS Independent
 Description-Content-Type: text/markdown
 
-# Kinematical broadening
+# PyKinematicalBroadening
 email: antineutrinomuon@gmail.com, jean@astro.up.pt
 
 © Copyright ®

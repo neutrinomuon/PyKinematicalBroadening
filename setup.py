@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup( name='PyKinematicalBroadening',
        version='0.0.1',
-       description='Pykinematical broadening in velocity space',
+       description='Kinematical broadening in velocity space (km/s)',
        long_description=long_description,      # Long description read from the the readme file
        long_description_content_type="text/markdown",
        author='Jean Gomes',
@@ -19,6 +19,6 @@ setup( name='PyKinematicalBroadening',
                    ],
        package_dir={"PyKinematicalBroadening": "src/python"},
        packages=['PyKinematicalBroadening'],
-       data_files=[('', ['version.txt'])],
+       data_files=[('', ['version.txt']),],
       )
     

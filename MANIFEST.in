@@ -1,1 +1,1 @@
-recursive-include src/python *.spec
+recursive-include src/python test_spectrum.spec
