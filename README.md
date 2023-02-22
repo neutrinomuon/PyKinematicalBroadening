@@ -23,7 +23,7 @@ The main code reads in a test spectrum from a file and interpolates it onto a se
 
 Example of the test_spectrum test_spectrum.spec successively broadened by different velocity dispersions in [km/s]. The code is not optimized for cpu speed, but it shows the principle of how it works.
 
-<img src="https://github.com/neutrinomuon/PyKinematicalBroadening/blob/main/figures/KinematicalBroadening.png" width="90%">
+<img src="https://github.com/neutrinomuon/PyKinematicalBroadening/blob/main/figures/KinematicalBroadening.png?raw=true" width="90%">
 
 ## Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
 
