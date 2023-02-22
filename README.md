@@ -19,6 +19,8 @@ In detail, the GaussianConvolution function convolves a given input spectrum flu
 
 The main code reads in a test spectrum from a file and interpolates it onto a set of equally spaced wavelength values. It then loops over different velocity dispersions and calls 'broadening' for each one, broadening the spectrum and plotting the results.
 
+## Insatallation
+
 You can easily install <a href=https://pypi.org/project/PyKinematicalBroadening/>PyKinematicalBroadening</a> by using pip - <a href='https://pypi.org/'>PyPI - The Python Package Index</a>:
 <pre>
 <code>

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: PyKinematicalBroadening
-Version: 0.0.4
+Version: 0.0.5
 Summary: Kinematical broadening in velocity space (km/s)
 Home-page: https://github.com/neutrinomuon/PyKinematicalBroadening
 Author: Jean Gomes
@@ -8,6 +8,7 @@ Author-email: antineutrinomuon@gmail.com
 Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: OS Independent
 Description-Content-Type: text/markdown
+License-File: LICENSE.txt
 
 # PyKinematicalBroadening
 email: antineutrinomuon@gmail.com, jean@astro.up.pt
