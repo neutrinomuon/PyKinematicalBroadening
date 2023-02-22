@@ -25,6 +25,6 @@ The main code reads in a test spectrum from a file and interpolates it onto a se
 
 <a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>Creative Commons Attribution-NonCommercial-NoDerivs (CC-BY-NC-ND)</a>
 
-Example of the test_spectrum test_spectrum.spec successively broadened by different veloity dispersions in [km/s]. The code is not optimized for cpu speed, but it shows the principle of how it works.
+Example of the test_spectrum test_spectrum.spec successively broadened by different velocity dispersions in [km/s]. The code is not optimized for cpu speed, but it shows the principle of how it works.
 
 <img src=https://github.com/neutrinomuon/ExtragalacticKinematics/blob/main/KinematicalBroadening.png width="90%">
