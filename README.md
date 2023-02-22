@@ -58,7 +58,9 @@ Example of the test_spectrum test_spectrum.spec successively broadened by differ
 
 <img src="https://github.com/neutrinomuon/PyKinematicalBroadening/blob/main/figures/KinematicalBroadening.png?raw=true" width="90%">
 
-## Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
+#### <b>LICENSE</b>
+
+Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
 
 <img src="https://github.com/neutrinomuon/PyKinematicalBroadening/blob/main/figures/cc_logo.png?raw=true" width="10%">
 
