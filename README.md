@@ -1,4 +1,4 @@
-# Kinematical broadnening
+# Kinematical broadening
 email: antineutrinomuon@gmail.com, jean@astro.up.pt
 
 © Copyright ®
