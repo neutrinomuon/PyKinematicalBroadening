@@ -1,4 +1,4 @@
-# PyKinematicalBroadening
+### PyKinematicalBroadening
 email: antineutrinomuon@gmail.com, jean@astro.up.pt
 
 © Copyright ®
@@ -11,7 +11,7 @@ J.G. - Jean Gomes
 
 <hr>
 
-## Description
+#### <b>Description</b>
 
 RESUME: PyKinematicalBroadening is an Extragalactic Kinematics repository for applying a kernel in velocity space to models in order to obtain the respective broadened model. This is a python code that performs kinematical broadening of a spectrum by applying a kernel in velocity space to a model, and obtaining the respective broadened model. The code defines the function broadening, which performs the convolution with a Gaussian kernel. The kernel is generated using a certain number of points, which can be set with the Ni_Gauss parameter. The code then reads in a test spectrum from a file, interpolates it onto a set of equally spaced wavelength values, and then plots the original and broadened spectra for different velocity dispersions.
 
@@ -19,7 +19,9 @@ In detail, the GaussianConvolution function convolves a given input spectrum flu
 
 The main code reads in a test spectrum from a file and interpolates it onto a set of equally spaced wavelength values. It then loops over different velocity dispersions and calls 'broadening' for each one, broadening the spectrum and plotting the results.
 
-## Insatallation
+<hr>
+
+#### <b>Installation</b>
 
 You can easily install <a href=https://pypi.org/project/PyKinematicalBroadening/>PyKinematicalBroadening</a> by using pip - <a href='https://pypi.org/'>PyPI - The Python Package Index</a>:
 <pre>
@@ -48,7 +50,9 @@ python setup.py install
 </code>
 </pre>
 
-## Example
+<hr>
+
+#### <b>Example</b>
 
 Example of the test_spectrum test_spectrum.spec successively broadened by different velocity dispersions in [km/s]. The code is not optimized for cpu speed, but it shows the principle of how it works.
 
