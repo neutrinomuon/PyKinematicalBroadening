@@ -5,10 +5,10 @@ Revised interface on Sat Jan 30 12:07:21 2021
 
 @author: Jean Gomes
 
-RESUME :  Kinematical broadening of a spectrum! Extragalactic Kinematics is a repository for 
+RESUME :  Kinematical broadening of a spectrum in velocity space! Extragalactic Kinematical broadening is a repository for 
 applying a kernel in velocity space to models in order to obtain the respective broadened model.
 
-Version: v01 beta
+Version: v01
 
 Written: Jean Michel Gomes © Copyright
 Created on un Oct 15 10:00:52 WEST 2006
@@ -19,9 +19,9 @@ import matplotlib.pylab as pl
 
 import numpy as np
 
-def GaussianConvolution(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41, fill_val=0.0, verbosity=0):
+def broadening(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41, fill_val=0.0, verbosity=0):
     Pi = np.pi
-    c = 2.997925 * 100000.0
+    c  = 2.99792458 * 100000.0
 
     IsKeepOn = 1
 
@@ -81,7 +81,7 @@ def GaussianConvolution(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gau
     return fluxes_s, IsKeepOn
 
 
-def GaussianConvolution_OLD( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41, fill_val=0.0, verbosity=0 ):
+def broadening_OLD( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41, fill_val=0.0, verbosity=0 ):
     Pi=3.141592653589793
     c=2.997925*100000.0
     
@@ -146,49 +146,49 @@ def GaussianConvolution_OLD( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, N
 
     return  fluxes_s,IsKeepOn
 
-file = 'test_spectrum.spec'
-o = open(file)
-r = o.readlines()
-o.close()
+#file = 'test_spectrum.spec'
+#o = open(file)
+#r = o.readlines()
+#o.close()
 
-l = [] ; f = []
-for i in enumerate(r):
-    i_split = i[1].split()
-    if i_split[0] != '#':
-        #print(i_split)
-        l.append(i_split[0]) ; f.append(i_split[1])
+#l = [] ; f = []
+#for i in enumerate(r):
+#    i_split = i[1].split()
+##    if i_split[0] != '#':
+#        #print(i_split)
+#        l.append(i_split[0]) ; f.append(i_split[1])
 
-l = np.array(l, dtype=float) ; f = np.array(f, dtype=float) 
+#l = np.array(l, dtype=float) ; f = np.array(f, dtype=float) 
 
 # Interpolation for equally spaced wavelength steps
-lambda_o = np.arange(3000,9001,1.)
-fluxes_o = np.interp(lambda_o,l,f)
-Nlambdao = lambda_o.size
+#lambda_o = np.arange(3000,9001,1.)
+#fluxes_o = np.interp(lambda_o,l,f)
+#Nlambdao = lambda_o.size
 
-lambda_s = lambda_o
-vc0_gals = 0.0
-Ni_Gauss = 51
-vd_sigma =0.0
+#lambda_s = lambda_o
+#vc0_gals = 0.0
+#Ni_Gauss = 51
+#vd_sigma =0.0
 
-vd = np.arange(0.,1050.,50.)
+#vd = np.arange(0.,1050.,50.)
 
-n = vd.size
-colors = pl.cm.jet(np.linspace(0,1,n))
+#n = vd.size
+#colors = pl.cm.jet(np.linspace(0,1,n))
 
-plt.xlim(3000,9000)
-plt.plot(lambda_o,fluxes_o)
-for i in enumerate(vd):
-    Ni_Gauss = max(51,int( i[1] ) + 1)
-    if (Ni_Gauss % 2) == 0:
-        Ni_Gauss += 1
+#plt.xlim(3000,9000)
+#plt.plot(lambda_o,fluxes_o)
+#for i in enumerate(vd):
+#    Ni_Gauss = max(51,int( i[1] ) + 1)
+#    if (Ni_Gauss % 2) == 0:
+#        Ni_Gauss += 1
         
-    print('vd = {0:}'.format(i[1]))
-    fluxes_s, IskeepOn = GaussianConvolution( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma+i[1], Ni_Gauss=Ni_Gauss, fill_val=0.0, verbosity=0 )
-    plt.plot(lambda_s,fluxes_s,label=r'$\sigma_\star$ = {0:}'.format(i), color=colors[i[0]])
+#    print('vd = {0:}'.format(i[1]))
+#    fluxes_s, IskeepOn = GaussianConvolution( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma+i[1], Ni_Gauss=Ni_Gauss, fill_val=0.0, verbosity=0 )
+#    plt.plot(lambda_s,fluxes_s,label=r'$\sigma_\star$ = {0:}'.format(i), color=colors[i[0]])
 
-legend = plt.legend(loc=1, prop={'size': 5}, title=r'Velocity dispersion $\sigma_\star$ [km/s]')
-legend.get_title().set_fontsize('5')
+#legend = plt.legend(loc=1, prop={'size': 5}, title=r'Velocity dispersion $\sigma_\star$ [km/s]')
+#legend.get_title().set_fontsize('5')
 #plt.setp( legend.get_title(),fontsize='xx-small')
 
-plt.xlabel(r'Wavelength [$\AA$]')
-plt.ylabel(r'$F_\lambda$')
+#plt.xlabel(r'Wavelength [$\AA$]')
+#plt.ylabel(r'$F_\lambda$')
