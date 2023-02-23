@@ -58,6 +58,86 @@ Example of the test_spectrum test_spectrum.spec successively broadened by differ
 
 <img src="https://github.com/neutrinomuon/PyKinematicalBroadening/blob/main/figures/KinematicalBroadening.png?raw=true" width="90%">
 
+#### <b>STRUCTURE</b>
+
+<pre>
+PyKinematicalBroadening
+├── MANIFEST.in
+├── dist
+│   ├── PyKinematicalBroadening-0.0.3.tar.gz
+│   ├── PyKinematicalBroadening-0.0.5.tar.gz
+│   ├── PyKinematicalBroadening-0.0.6.tar.gz
+│   └── PyKinematicalBroadening-0.0.4.tar.gz
+├── README.md
+├── figures
+│   ├── KinematicalBroadening.png
+│   └── cc_logo.png
+├── PyKinematicalBroadening.egg-info
+│   ├── PKG-INFO
+│   ├── dependency_links.txt
+│   ├── SOURCES.txt
+│   ├── top_level.txt
+│   └── requires.txt
+├── LICENSE.txt
+├── setup.py
+├── tutorials
+│   ├── .ipynb_checkpoints
+│   │   └── Example 1 - Kinematical Broadening-checkpoint.ipynb
+│   └── Example 1 - Kinematical Broadening.ipynb
+├── pykinematicalbroadening
+│   ├── win-32
+│   │   └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+│   ├── linux-armv7l
+│   │   └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+│   ├── linux-armv6l
+│   │   ├── .projectignore
+│   │   └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+│   ├── linux-s390x
+│   │   └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+│   ├── linux-ppc64
+│   │   └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+│   ├── linux-aarch64
+│   │   ├── .projectignore
+│   │   └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+│   ├── linux-32
+│   │   ├── .projectignore
+│   │   └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+│   ├── linux-64
+│   │   ├── .projectignore
+│   │   └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+│   ├── osx-64
+│   │   └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+│   ├── meta.yaml
+│   ├── win-64
+│   │   └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+│   ├── README.txt
+│   ├── linux-ppc64le
+│   │   └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+│   └── osx-arm64
+│       └── pykinematicalbroadening-0.0.5-py39_0.tar.bz2
+├── Pykinematicalbroadening.egg-info
+│   ├── PKG-INFO
+│   ├── dependency_links.txt
+│   ├── SOURCES.txt
+│   ├── top_level.txt
+│   └── requires.txt
+├── src
+│   └── python
+│       ├── __pycache__
+│       ├── test_spectrum.spec
+│       ├── __init__.py
+│       └── PyKinematicalBroadening.py
+├── version.txt
+└── build
+    └── lib
+        ├── Pykinematicalbroadening
+        └── PyKinematicalBroadening
+
+26 directories, 44 files
+</pre>
+
+<hr>
+
 #### <b>LICENSE</b>
 
 Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
