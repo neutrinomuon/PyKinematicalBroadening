@@ -13,28 +13,50 @@ J.G. - Jean Gomes
 
 #### <b>RESUME</b>
 
-PyKinematicalBroadening is an Extragalactic Kinematics repository for applying a kernel in velocity space to models in order to obtain the respective broadened model. This is a python code that performs kinematical broadening of a spectrum by applying a kernel in velocity space to a model, and obtaining the respective broadened model. The code defines the function broadening, which performs the convolution with a Gaussian kernel. The kernel is generated using a certain number of points, which can be set with the Ni_Gauss parameter. The code then reads in a test spectrum from a file, interpolates it onto a set of equally spaced wavelength values, and then plots the original and broadened spectra for different velocity dispersions.
+PyKinematicalBroadening is an Extragalactic Kinematics repository for applying
+a kernel in velocity space to models in order to obtain the respective
+broadened model. This is a python code that performs kinematical broadening of
+a spectrum by applying a kernel in velocity space to a model, and obtaining
+the respective broadened model. The code defines the function broadening,
+which performs the convolution with a Gaussian kernel. The kernel is generated
+using a certain number of points, which can be set with the Ni_Gauss
+parameter. The code then reads in a test spectrum from a file, interpolates it
+onto a set of equally spaced wavelength values, and then plots the original
+and broadened spectra for different velocity dispersions.
 
-In detail, the GaussianConvolution function convolves a given input spectrum fluxes_o defined at wavelengths lambda_o with a Gaussian kernel of width vd_sigma and mean velocity vc0_gals. The kernel is defined with Ni_Gauss points, which should be at least as large as vd_sigma. The output spectrum is defined at wavelengths lambda_s, and is returned as fluxes_s. The fill_val parameter defines the value to use for regions outside of the original wavelength range, and verbosity controls the level of detail of console output.
+In detail, the GaussianConvolution function convolves a given input spectrum
+fluxes_o defined at wavelengths lambda_o with a Gaussian kernel of width
+vd_sigma and mean velocity vc0_gals. The kernel is defined with Ni_Gauss
+points, which should be at least as large as vd_sigma. The output spectrum is
+defined at wavelengths lambda_s, and is returned as fluxes_s. The fill_val
+parameter defines the value to use for regions outside of the original
+wavelength range, and verbosity controls the level of detail of console
+output.
 
-The main code reads in a test spectrum from a file and interpolates it onto a set of equally spaced wavelength values. It then loops over different velocity dispersions and calls 'broadening' for each one, broadening the spectrum and plotting the results.
+The main code reads in a test spectrum from a file and interpolates it onto a
+set of equally spaced wavelength values. It then loops over different velocity
+dispersions and calls 'broadening' for each one, broadening the spectrum and
+plotting the results.
 
 <hr>
 
 #### <b>INSTALLATION</b>
 
 You can easily install <a href=https://pypi.org/project/PyKinematicalBroadening/>PyKinematicalBroadening</a> by using pip - <a href='https://pypi.org/'>PyPI - The Python Package Index</a>:
+
 <pre>
 <code>
 pip install PyKinematicalBroadening
 </code>
 </pre>
+
 or by using a generated conda repository <a href='https://anaconda.org/neutrinomuon/PyKinematicalBroadening'>https://anaconda.org/neutrinomuon/PyKinematicalBroadening</a>:
 
 [![badgetanaconda](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/version.svg)](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/version.svg)
 [![badgetreleasedate](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/latest_release_date.svg)](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/latest_release_date.svg)
 [![badgetplatforms](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/platforms.svg
 )](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/platforms.svg)
+
 <pre>
 <code>
 conda install -c neutrinomuon PyKinematicalBroadening
@@ -43,6 +65,7 @@ conda install -c neutrinomuon PyKinematicalBroadening
 OBS.: Linux, OS-X ad Windows pre-compilations available in conda.
 
 You can also clone the repository and install by yourself in your machine:
+
 <pre>
 <code>
 git clone https://github.com/neutrinomuon/PyKinematicalBroadening
@@ -137,6 +160,42 @@ PyKinematicalBroadening
 
 26 directories, 44 files
 </pre>
+
+<hr>
+
+#### <b>REFERENCES</b>
+
+<ol>
+
+<il>Bureau, M., et al. "The SAURON project - III. Integral-field absorption-line
+kinematics of 48 elliptical and lenticular galaxies." Monthly Notices of the
+Royal Astronomical Society, vol. 370, no. 2, 2006, pp. 753-771. DOI: <a
+href="https://doi.org/10.1111/j.1365-2966.2006.10998.x">10.1111/j.1365-2966.2006.10998.x</a>. Available
+at: <a
+href="https://academic.oup.com/mnras/article/370/2/753/1004246">https://academic.oup.com/mnras/article/370/2/753/1004246</a>.</il>
+
+<il>Faber, S. M. "The Stellar Population Histories of Elliptical Galaxies: A
+Review." Annual Review of Astronomy and Astrophysics, vol. 46, no. 1, 2008,
+pp. 121-157. DOI: <a
+href="https://doi.org/10.1146/annurev-astro-082708-101650">10.1146/annurev-astro-082708-101650</a>. Available
+at: <a
+href="https://www.annualreviews.org/doi/10.1146/annurev-astro-082708-101650">https://www.annualreviews.org/doi/10.1146/annurev-astro-082708-101650</a>.</il>
+
+<il>Peletier, R. F., et al. "The SAURON project - XI. Stellar populations from
+absorption-line strength maps of 24 early-type spirals." Monthly Notices of
+the Royal Astronomical Society, vol. 379, no. 2, 2007, pp. 445-469. DOI: <a
+href="https://doi.org/10.1111/j.1365-2966.2007.11803.x">10.1111/j.1365-2966.2007.11803.x</a>. Available
+at: <a
+href="https://academic.oup.com/mnras/article/379/2/445/1078958">https://academic.oup.com/mnras/article/379/2/445/1078958</a>.</il>
+
+<il>Maraston, C. "Spectral Synthesis of Stellar Populations with Star Formation
+Histories." Monthly Notices of the Royal Astronomical Society, vol. 362,
+no. 3, 2005, pp. 799-825. DOI: <a
+href="https://doi.org/10.1111/j.1365-2966.2005.09340.x">10.1111/j.1365-2966.2005.09340.x</a>. Available
+at: <a
+href="https://academic.oup.com/mnras/article/362/3/799/986891">https://academic.oup.com/mnras/article/362/3/799/986891</a>.</il>
+
+</ol>
 
 <hr>
 
