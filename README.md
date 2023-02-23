@@ -56,19 +56,16 @@ or by using a generated conda repository <a href='https://anaconda.org/neutrinom
 )](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/platforms.svg)
 
 <pre>
-<code>
 conda install -c neutrinomuon PyKinematicalBroadening
-</code>
 </pre>
+
 OBS.: Linux, OS-X ad Windows pre-compilations available in conda.
 
 You can also clone the repository and install by yourself in your machine:
 
 <pre>
-<code>
 git clone https://github.com/neutrinomuon/PyKinematicalBroadening
 python setup.py install
-</code>
 </pre>
 
 <hr>
