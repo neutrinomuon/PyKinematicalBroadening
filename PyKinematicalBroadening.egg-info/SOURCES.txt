@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+version.txt
+PyKinematicalBroadening.egg-info/PKG-INFO
+PyKinematicalBroadening.egg-info/SOURCES.txt
+PyKinematicalBroadening.egg-info/dependency_links.txt
+PyKinematicalBroadening.egg-info/requires.txt
+PyKinematicalBroadening.egg-info/top_level.txt
+src/python/PyKinematicalBroadening.py
+src/python/__init__.py
+src/python/test_spectrum.spec
