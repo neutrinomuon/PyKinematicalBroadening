@@ -48,7 +48,7 @@ You can easily install <a href=https://pypi.org/project/PyKinematicalBroadening/
 pip install PyKinematicalBroadening
 </pre>
 
-or by using a generated conda repository <a href='https://anaconda.org/neutrinomuon/PyKinematicalBroadening'>https://anaconda.org/neutrinomuon/PyKinematicalBroadening</a>:
+<br>or by using a generated conda repository <a href='https://anaconda.org/neutrinomuon/PyKinematicalBroadening'>https://anaconda.org/neutrinomuon/PyKinematicalBroadening</a>:
 
 [![badgetanaconda](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/version.svg)](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/version.svg)
 [![badgetreleasedate](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/latest_release_date.svg)](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/latest_release_date.svg)
@@ -59,7 +59,7 @@ or by using a generated conda repository <a href='https://anaconda.org/neutrinom
 conda install -c neutrinomuon PyKinematicalBroadening
 </pre>
 
-OBS.: Linux, OS-X ad Windows pre-compilations available in conda.
+<br>OBS.: Linux, OS-X ad Windows pre-compilations available in conda.
 
 You can also clone the repository and install by yourself in your machine:
 
