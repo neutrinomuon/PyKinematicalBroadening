@@ -102,11 +102,10 @@ def broadening_gh(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41,
 
     return fluxes_s, IsKeepOn
                 
-                
+def broadening_kernel(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, kernel_func, kernel_params=None, Ni_kernel=41, fill_val=0.0, verbosity=0):
 
-def gauss_hermite_convolution(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, num_hermite=5, hermite_coeffs=[1.0, 0.0, -0.5, 0.0, 0.375], fill_val=0.0):
-    Pi = np.pi
     c = 2.99792458 * 100000.0
+    Pi = np.pi
 
     IsKeepOn = 1
 
@@ -117,12 +116,22 @@ def gauss_hermite_convolution(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, 
     N_sigmas = 6
     ullambda = -np.float64(N_sigmas)
     uulambda = +np.float64(N_sigmas)
+    du_kernel = (uulambda - ullambda) / np.float64(Ni_kernel - 1)
 
-    # Compute Gauss-Hermite coefficients
-    hermite_coeffs = np.asarray(hermite_coeffs[:num_hermite])
-    hermite_coeffs /= np.sqrt(np.sum(hermite_coeffs**2))
+    u_array = np.arange(ullambda,uulambda+du_kernel,du_kernel)
 
-    dlambdao = np.gradient(lambda_o)
+    # print(du_kernel)
+
+    kernel = kernel_func(u_array, *kernel_params) if kernel_params else kernel_func(u_array)
+    sum_area = np.trapz(kernel,x=u_array)
+
+    if verbosity == 2:
+        print("... DEBUG mode to check kernel shapes")
+        kernel_reference = np.zeros_like(kernel)
+        kernel_reference[int(kernel.size/2)] = 1.0
+        return u_array, kernel, kernel_reference
+
+    # dlambdao = np.gradient(lambda_o)
     v_0_gals = vc0_gals / c
 
     if v_0_gals != 0.0:
@@ -136,11 +145,12 @@ def gauss_hermite_convolution(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, 
 
         if lamb_min < lambda_s[ilambdas] < lamb_max:
 
-            sumfluxgh = 0.0
-            u = ullambda
-            while u <= uulambda:
+            sumfluxk = 0.0
+            #sum_area = 0.0
 
-                v = vc0_gals + abs(vd_sigma) * u
+            for i in range(u_array.size):
+                
+                v = vc0_gals + abs(vd_sigma) * u_array[i]
                 l = lambda_s[ilambdas] / (1.0 + v / c)
 
                 if l < lambda_o[0]:
@@ -153,12 +163,10 @@ def gauss_hermite_convolution(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, 
                     b = (fluxes_o[N_indice] - a * lambda_o[N_indice])
                     f = a * l + b
 
-                gauss_term = np.exp(-(u ** 2 / 2.0))
-                hermite_term = np.sum([hermite(n)(u) * hermite_coeffs[n] for n in range(num_hermite)])
-                sumfluxgh += f * gauss_term * hermite_term
-                u += 1
+                sumfluxk += f * kernel[i]
+                #sum_area += kernel[i] * du_kernel
 
-            fluxes_s[ilambdas] = sumfluxgh * np.sqrt(2.0) / np.sqrt(Pi)
+            fluxes_s[ilambdas] = sumfluxk * du_kernel / sum_area
 
         else:
             fluxes_s[ilambdas] = fill_val
@@ -185,7 +193,7 @@ def broadening(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41, fi
     uulambda = +np.float64(N_sigmas)
     dulambda = (uulambda - ullambda) / np.float64(Ni_Gauss - 1)
 
-    dlambdao = np.gradient(lambda_o)
+    # dlambdao = np.gradient(lambda_o)
     v_0_gals = vc0_gals / c
 
     if v_0_gals != 0.0:
@@ -292,37 +300,59 @@ def broadening_OLD( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=4
 
     return  fluxes_s,IsKeepOn
 
-# file = 'test_spectrum.spec'
-# o = open(file)
-# r = o.readlines()
-# o.close()
+file = 'test_spectrum.spec'
+o = open(file)
+r = o.readlines()
+o.close()
 
-# l = [] ; f = []
-# for i in enumerate(r):
-#     i_split = i[1].split()
-#     if i_split[0] != '#':
-#         # print(i_split)
-#         l.append(i_split[0]) ; f.append(i_split[1])
+l = [] ; f = []
+for i in enumerate(r):
+    i_split = i[1].split()
+    if i_split[0] != '#':
+        # print(i_split)
+        l.append(i_split[0]) ; f.append(i_split[1])
 
-# l = np.array(l, dtype=float) ; f = np.array(f, dtype=float) 
+l = np.array(l, dtype=float) ; f = np.array(f, dtype=float) 
 
-# # Interpolation for equally spaced wavelength steps
-# lambda_o = np.arange(3000,9001,1.)
-# fluxes_o = np.interp(lambda_o,l,f)
-# Nlambdao = lambda_o.size
+f = f[ (l>8000) & (l<9000) ]
+l = l[ (l>8000) & (l<9000) ]
 
-# lambda_s = lambda_o
-# vc0_gals = 0.0
-# Ni_Gauss = 11
-# vd_sigma = 0.0
+# Interpolation for equally spaced wavelength steps
+lambda_o = np.arange(8300,8901,1.)
+fluxes_o = np.interp(lambda_o,l,f)
+Nlambdao = lambda_o.size
 
-# vd = np.arange(0.,550.,50.)
+lambda_s = lambda_o
+vc0_gals = 0.0
+Ni_Gauss = 11
+vd_sigma = 0.0
 
-# n = vd.size
-# colors = pl.cm.jet(np.linspace(0,1,n))
+vd = np.arange(0.,550.,50.)
+
+n = vd.size
+colors = pl.cm.jet(np.linspace(0,1,n))
 
 # plt.xlim(3000,9000)
-# plt.plot(lambda_o,fluxes_o)
+plt.plot(lambda_o,fluxes_o)
+
+
+# Define the Lorentzian kernel function
+def lorentzian(x, gamma):
+    return gamma / (np.pi * (x**2 + gamma**2))
+
+def gaussian(x, amplitude, mean, stddev):
+    """Gaussian function with amplitude, mean, and standard deviation."""
+    return amplitude * np.exp(-0.5 * ((x - mean) / stddev) ** 2)
+
+vd_sigma = 250
+fluxes_s_k, IskeepOn = broadening_kernel(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, gaussian, kernel_params=[1.0,0.0,1.0], Ni_kernel=41, verbosity=0 )
+fluxes_s, IskeepOn = broadening( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=Ni_Gauss, fill_val=0.0, verbosity=0 )
+plt.plot(lambda_s,fluxes_s,linestyle='-')
+plt.plot(lambda_s,fluxes_s_k)
+
+plt.xlim(8600,8700)
+plt.ylim(0.00007,0.00013) 
+
 # for i in enumerate(vd):
 #     # Ni_Gauss = max(51,int( i[1] ) + 1)
 #     if (Ni_Gauss % 2) == 0:
