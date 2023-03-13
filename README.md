@@ -15,30 +15,11 @@ J.G. - Jean Gomes
 
 <img src="https://raw.githubusercontent.com/neutrinomuon/PyKinematicalBroadening/main/figures/Kinematics.png" width=120>
 
-PyKinematicalBroadening is an Extragalactic Kinematics repository for applying
-a kernel in velocity space to models in order to obtain the respective
-broadened model. This is a python code that performs kinematical broadening of
-a spectrum by applying a kernel in velocity space to a model, and obtaining
-the respective broadened model. The code defines the function broadening,
-which performs the convolution with a Gaussian kernel. The kernel is generated
-using a certain number of points, which can be set with the Ni_Gauss
-parameter. The code then reads in a test spectrum from a file, interpolates it
-onto a set of equally spaced wavelength values, and then plots the original
-and broadened spectra for different velocity dispersions.
+PyKinematicalBroadening is a Python repository for Extragalactic Kinematics that performs kinematical broadening of a spectrum by convolving it with a kernel in velocity space, which results in a broadened model. This code provides a function called 'broadening,' which uses a Gaussian kernel for convolution. However, in addition to the Gaussian kernel, the code can also use Gauss-Hermite kernels for convolution.
 
-In detail, the GaussianConvolution function convolves a given input spectrum
-fluxes_o defined at wavelengths lambda_o with a Gaussian kernel of width
-vd_sigma and mean velocity vc0_gals. The kernel is defined with Ni_Gauss
-points, which should be at least as large as vd_sigma. The output spectrum is
-defined at wavelengths lambda_s, and is returned as fluxes_s. The fill_val
-parameter defines the value to use for regions outside of the original
-wavelength range, and verbosity controls the level of detail of console
-output.
+The Gauss-Hermite kernels provide a more general perspective than the Gaussian kernels, as they can account for higher-order velocity moments of the broadening process. The code defines the width and mean velocity of the kernel with vd_sigma and vc0_gals, respectively, while the number of points for the kernel is set with the Ni_Gauss parameter. The output spectrum is defined at wavelengths lambda_s and is returned as fluxes_s. The fill_val parameter defines the value to use for regions outside of the original wavelength range, and verbosity controls the level of detail of console output.
 
-The main code reads in a test spectrum from a file and interpolates it onto a
-set of equally spaced wavelength values. It then loops over different velocity
-dispersions and calls 'broadening' for each one, broadening the spectrum and
-plotting the results.
+In summary, the PyKinematicalBroadening code provides a flexible way to apply kinematical broadening to a spectrum using Gaussian or Gauss-Hermite kernels. The code reads in a test spectrum, interpolates it onto a set of equally spaced wavelength values, and loops over different velocity dispersions to call the 'broadening' function, which broadens the spectrum and plots the results.
 
 <hr>
 
