@@ -1,12 +1,10 @@
 Metadata-Version: 2.1
 Name: PyKinematicalBroadening
-Version: 0.0.7
+Version: 0.0.8
 Summary: Extragalactic Kinematics is an exciting tool that utilizes a kernel (e.g., Gaussian) to broaden models in velocity space, resulting in a highly accurate and detailed output. With this repository, you can easily apply kinematical broadening to your models and gain valuable insights into extragalactic kinematics.
 Home-page: https://github.com/neutrinomuon/PyKinematicalBroadening
 Author: Jean Gomes
 Author-email: antineutrinomuon@gmail.com
-License: UNKNOWN
-Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: OS Independent
 Description-Content-Type: text/markdown
@@ -26,6 +24,8 @@ J.G. - Jean Gomes
 <hr>
 
 #### <b>RESUME</b>
+
+<img src="https://raw.githubusercontent.com/neutrinomuon/PyKinematicalBroadening/main/figures/Kinematics.png" width=120>
 
 PyKinematicalBroadening is an Extragalactic Kinematics repository for applying
 a kernel in velocity space to models in order to obtain the respective
@@ -176,33 +176,36 @@ PyKinematicalBroadening
 
 <ol>
 
-<il>Bureau, M., et al. "The SAURON project - III. Integral-field absorption-line
-kinematics of 48 elliptical and lenticular galaxies." Monthly Notices of the
-Royal Astronomical Society, vol. 370, no. 2, 2006, pp. 753-771. DOI: <a
-href="https://doi.org/10.1111/j.1365-2966.2006.10998.x">10.1111/j.1365-2966.2006.10998.x</a>. Available
-at: <a
-href="https://academic.oup.com/mnras/article/370/2/753/1004246">https://academic.oup.com/mnras/article/370/2/753/1004246</a>.</il>
+<il>Tonry, J., & Davis, M. 1979, AJ, 84, 1511</il>
 
-<il>Faber, S. M. "The Stellar Population Histories of Elliptical Galaxies: A
-Review." Annual Review of Astronomy and Astrophysics, vol. 46, no. 1, 2008,
-pp. 121-157. DOI: <a
-href="https://doi.org/10.1146/annurev-astro-082708-101650">10.1146/annurev-astro-082708-101650</a>. Available
-at: <a
-href="https://www.annualreviews.org/doi/10.1146/annurev-astro-082708-101650">https://www.annualreviews.org/doi/10.1146/annurev-astro-082708-101650</a>.</il>
+<il>van der Marel, R. P., & Franx, M. 1993, ApJ, 407, 525</il>
+        
+<il>Emsellem, E., et al. "The SAURON project - III. Integral-field absorption-line
+kinematics of 48 elliptical and lenticular galaxies." Monthly Notices of the Royal Astronomical Society, Volume 352, Issue 3, pp. 721-743. DOI:  
+<a href="https://doi.org/10.1111/j.1365-2966.2004.07948.x">10.1111/j.1365-2966.2004.07948.x</a> ; <a href="https://doi.org/10.48550/arXiv.astro-ph/0404034">10.48550/arXiv.astro-ph/0404034</a>. Available
+at: <a href="https://ui.adsabs.harvard.edu/abs/2004MNRAS.352..721E/abstract">https://ui.adsabs.harvard.edu/abs/2004MNRAS.352..721E/abstract</a>.</il>
 
-<il>Peletier, R. F., et al. "The SAURON project - XI. Stellar populations from
-absorption-line strength maps of 24 early-type spirals." Monthly Notices of
-the Royal Astronomical Society, vol. 379, no. 2, 2007, pp. 445-469. DOI: <a
-href="https://doi.org/10.1111/j.1365-2966.2007.11803.x">10.1111/j.1365-2966.2007.11803.x</a>. Available
-at: <a
-href="https://academic.oup.com/mnras/article/379/2/445/1078958">https://academic.oup.com/mnras/article/379/2/445/1078958</a>.</il>
+[//]: # (<il>Faber, S. M. "The Stellar Population Histories of Elliptical Galaxies: A
+[//]: # Review." Annual Review of Astronomy and Astrophysics, vol. 46, no. 1, 2008,
+[//]: # pp. 121-157. DOI: <a
+[//]: # href="https://doi.org/10.1146/annurev-astro-082708-101650">10.1146/annurev-astro-082708-101650</a>. Available
+[//]: # at: <a
+[//]: # href="https://www.annualreviews.org/doi/10.1146/annurev-astro-082708-101650">https://www.annualreviews.org/doi/10.1146/annurev-astro-082708-
+[//]: # 101650</a>.</il>)
 
-<il>Maraston, C. "Spectral Synthesis of Stellar Populations with Star Formation
-Histories." Monthly Notices of the Royal Astronomical Society, vol. 362,
-no. 3, 2005, pp. 799-825. DOI: <a
-href="https://doi.org/10.1111/j.1365-2966.2005.09340.x">10.1111/j.1365-2966.2005.09340.x</a>. Available
-at: <a
-href="https://academic.oup.com/mnras/article/362/3/799/986891">https://academic.oup.com/mnras/article/362/3/799/986891</a>.</il>
+[//]: # (<il>Peletier, R. F., et al. "The SAURON project - XI. Stellar populations from
+[//]: # absorption-line strength maps of 24 early-type spirals." Monthly Notices of
+[//]: # the Royal Astronomical Society, vol. 379, no. 2, 2007, pp. 445-469. DOI: <a
+[//]: # href="https://doi.org/10.1111/j.1365-2966.2007.11803.x">10.1111/j.1365-2966.2007.11803.x</a>. Available
+[//]: # at: <a
+[//]: # href="https://academic.oup.com/mnras/article/379/2/445/1078958">https://academic.oup.com/mnras/article/379/2/445/1078958</a>.</il>)
+
+[//]: # (<il>Maraston, C. "Spectral Synthesis of Stellar Populations with Star Formation
+[//]: # Histories." Monthly Notices of the Royal Astronomical Society, vol. 362,
+[//]: # no. 3, 2005, pp. 799-825. DOI: <a
+[//]: # href="https://doi.org/10.1111/j.1365-2966.2005.09340.x">10.1111/j.1365-2966.2005.09340.x</a>. Available
+[//]: # at: <a
+[//]: # href="https://academic.oup.com/mnras/article/362/3/799/986891">https://academic.oup.com/mnras/article/362/3/799/986891</a>.</il>)
 
 </ol>
 
@@ -215,6 +218,4 @@ Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
 <img src="https://github.com/neutrinomuon/PyKinematicalBroadening/blob/main/figures/cc_logo.png?raw=true" width="10%">
 
 <a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>Creative Commons Attribution-NonCommercial-NoDerivs (CC-BY-NC-ND)</a>
-
-
 
