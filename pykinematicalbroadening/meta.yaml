@@ -1,5 +1,5 @@
 {% set name = "PyKinematicalBroadening" %}
-{% set version = "0.0.5" %}
+{% set version = "0.0.8" %}
 
 package:
   name: "{{ name|lower }}"
