@@ -13,6 +13,8 @@ J.G. - Jean Gomes
 
 #### <b>RESUME</b>
 
+<img src="https://raw.githubusercontent.com/neutrinomuon/PyKinematicalBroadening/main/figures/Kinematics.png" width=120>
+
 PyKinematicalBroadening is an Extragalactic Kinematics repository for applying
 a kernel in velocity space to models in order to obtain the respective
 broadened model. This is a python code that performs kinematical broadening of
@@ -162,33 +164,32 @@ PyKinematicalBroadening
 
 <ol>
 
-<il>Bureau, M., et al. "The SAURON project - III. Integral-field absorption-line
-kinematics of 48 elliptical and lenticular galaxies." Monthly Notices of the
-Royal Astronomical Society, vol. 370, no. 2, 2006, pp. 753-771. DOI: <a
-href="https://doi.org/10.1111/j.1365-2966.2006.10998.x">10.1111/j.1365-2966.2006.10998.x</a>. Available
-at: <a
-href="https://academic.oup.com/mnras/article/370/2/753/1004246">https://academic.oup.com/mnras/article/370/2/753/1004246</a>.</il>
+<il>Emsellem, E., et al. "The SAURON project - III. Integral-field absorption-line
+kinematics of 48 elliptical and lenticular galaxies." Monthly Notices of the Royal Astronomical Society, Volume 352, Issue 3, pp. 721-743. DOI:  
+<a href="https://doi.org/10.1111/j.1365-2966.2004.07948.x">10.1111/j.1365-2966.2004.07948.x</a> ; <a href="https://doi.org/10.48550/arXiv.astro-ph/0404034">10.48550/arXiv.astro-ph/0404034</a>. Available
+at: <a href="https://ui.adsabs.harvard.edu/abs/2004MNRAS.352..721E/abstract">https://ui.adsabs.harvard.edu/abs/2004MNRAS.352..721E/abstract</a>.</il>
 
-<il>Faber, S. M. "The Stellar Population Histories of Elliptical Galaxies: A
-Review." Annual Review of Astronomy and Astrophysics, vol. 46, no. 1, 2008,
-pp. 121-157. DOI: <a
-href="https://doi.org/10.1146/annurev-astro-082708-101650">10.1146/annurev-astro-082708-101650</a>. Available
-at: <a
-href="https://www.annualreviews.org/doi/10.1146/annurev-astro-082708-101650">https://www.annualreviews.org/doi/10.1146/annurev-astro-082708-101650</a>.</il>
+[//]: # (<il>Faber, S. M. "The Stellar Population Histories of Elliptical Galaxies: A
+[//]: # Review." Annual Review of Astronomy and Astrophysics, vol. 46, no. 1, 2008,
+[//]: # pp. 121-157. DOI: <a
+[//]: # href="https://doi.org/10.1146/annurev-astro-082708-101650">10.1146/annurev-astro-082708-101650</a>. Available
+[//]: # at: <a
+[//]: # href="https://www.annualreviews.org/doi/10.1146/annurev-astro-082708-101650">https://www.annualreviews.org/doi/10.1146/annurev-astro-082708-
+[//]: # 101650</a>.</il>)
 
-<il>Peletier, R. F., et al. "The SAURON project - XI. Stellar populations from
-absorption-line strength maps of 24 early-type spirals." Monthly Notices of
-the Royal Astronomical Society, vol. 379, no. 2, 2007, pp. 445-469. DOI: <a
-href="https://doi.org/10.1111/j.1365-2966.2007.11803.x">10.1111/j.1365-2966.2007.11803.x</a>. Available
-at: <a
-href="https://academic.oup.com/mnras/article/379/2/445/1078958">https://academic.oup.com/mnras/article/379/2/445/1078958</a>.</il>
+[//]: # (<il>Peletier, R. F., et al. "The SAURON project - XI. Stellar populations from
+[//]: # absorption-line strength maps of 24 early-type spirals." Monthly Notices of
+[//]: # the Royal Astronomical Society, vol. 379, no. 2, 2007, pp. 445-469. DOI: <a
+[//]: # href="https://doi.org/10.1111/j.1365-2966.2007.11803.x">10.1111/j.1365-2966.2007.11803.x</a>. Available
+[//]: # at: <a
+[//]: # href="https://academic.oup.com/mnras/article/379/2/445/1078958">https://academic.oup.com/mnras/article/379/2/445/1078958</a>.</il>)
 
-<il>Maraston, C. "Spectral Synthesis of Stellar Populations with Star Formation
-Histories." Monthly Notices of the Royal Astronomical Society, vol. 362,
-no. 3, 2005, pp. 799-825. DOI: <a
-href="https://doi.org/10.1111/j.1365-2966.2005.09340.x">10.1111/j.1365-2966.2005.09340.x</a>. Available
-at: <a
-href="https://academic.oup.com/mnras/article/362/3/799/986891">https://academic.oup.com/mnras/article/362/3/799/986891</a>.</il>
+[//]: # (<il>Maraston, C. "Spectral Synthesis of Stellar Populations with Star Formation
+[//]: # Histories." Monthly Notices of the Royal Astronomical Society, vol. 362,
+[//]: # no. 3, 2005, pp. 799-825. DOI: <a
+[//]: # href="https://doi.org/10.1111/j.1365-2966.2005.09340.x">10.1111/j.1365-2966.2005.09340.x</a>. Available
+[//]: # at: <a
+[//]: # href="https://academic.oup.com/mnras/article/362/3/799/986891">https://academic.oup.com/mnras/article/362/3/799/986891</a>.</il>)
 
 </ol>
 
