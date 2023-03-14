@@ -154,7 +154,7 @@ kinematics of 48 elliptical and lenticular galaxies." Monthly Notices of the Roy
 <a href="https://doi.org/10.1111/j.1365-2966.2004.07948.x">10.1111/j.1365-2966.2004.07948.x</a> ; <a href="https://doi.org/10.48550/arXiv.astro-ph/0404034">10.48550/arXiv.astro-ph/0404034</a>. Available
 at: <a href="https://ui.adsabs.harvard.edu/abs/2004MNRAS.352..721E/abstract">https://ui.adsabs.harvard.edu/abs/2004MNRAS.352..721E/abstract</a>.</il>
 
-[//]: # (<il>Faber, S. M. "The Stellar Population Histories of Elliptical Galaxies: A
+<!--[//]: # (<il>Faber, S. M. "The Stellar Population Histories of Elliptical Galaxies: A
 [//]: # Review." Annual Review of Astronomy and Astrophysics, vol. 46, no. 1, 2008,
 [//]: # pp. 121-157. DOI: <a
 [//]: # href="https://doi.org/10.1146/annurev-astro-082708-101650">10.1146/annurev-astro-082708-101650</a>. Available
@@ -174,7 +174,7 @@ at: <a href="https://ui.adsabs.harvard.edu/abs/2004MNRAS.352..721E/abstract">htt
 [//]: # no. 3, 2005, pp. 799-825. DOI: <a
 [//]: # href="https://doi.org/10.1111/j.1365-2966.2005.09340.x">10.1111/j.1365-2966.2005.09340.x</a>. Available
 [//]: # at: <a
-[//]: # href="https://academic.oup.com/mnras/article/362/3/799/986891">https://academic.oup.com/mnras/article/362/3/799/986891</a>.</il>)
+[//]: # href="https://academic.oup.com/mnras/article/362/3/799/986891">https://academic.oup.com/mnras/article/362/3/799/986891</a>.</il>)-->
 
 </ol>
 
