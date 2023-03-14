@@ -149,9 +149,9 @@ PyKinematicalBroadening
 
 #### <b>REFERENCES</b>
 
-- Tonry, J., & Davis, M. 1979, AJ, 84, 1511</il>
+- Tonry, J., & Davis, M. 1979, AJ, 84, 1511
 
-- van der Marel, R. P., & Franx, M. 1993, ApJ, 407, 525</il>
+- van der Marel, R. P., & Franx, M. 1993, ApJ, 407, 525
         
 - Emsellem, E., et al. "The SAURON project - III. Integral-field absorption-line
 kinematics of 48 elliptical and lenticular galaxies." Monthly Notices of the Royal Astronomical Society, Volume 352, Issue 3, pp. 721-743. DOI:  
@@ -180,7 +180,6 @@ at: <a href="https://ui.adsabs.harvard.edu/abs/2004MNRAS.352..721E/abstract">htt
 [//]: # at: <a
 [//]: # href="https://academic.oup.com/mnras/article/362/3/799/986891">https://academic.oup.com/mnras/article/362/3/799/986891</a>.</il>)-->
 
-</ol>
 
 <hr>
 
