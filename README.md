@@ -6,6 +6,7 @@ version:
 <!-- include the path to the text file here -->
 {{version.txt}}
 
+````markdown
 github repository: <a href='https://github.com/neutrinomuon/PyKinematicalBroadening/'>PyKinematicalBroadening</a>
 
 © Copyright ®
