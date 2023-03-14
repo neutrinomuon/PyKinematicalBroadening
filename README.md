@@ -54,7 +54,7 @@ python setup.py install
 
 #### <b>EXAMPLE</b>
 
-Example of the test\_spectrum test\_spectrum.spec successively broadened by different velocity dispersions in [km/s]. The code is not optimized for cpu speed, but it shows the principle of how it works.
+Example of the test spectrum test\_spectrum.spec successively broadened by different velocity dispersions in [km/s]. The code is not optimized for cpu speed, but it shows the principle of how it works.
 
 <img src="https://github.com/neutrinomuon/PyKinematicalBroadening/blob/main/figures/KinematicalBroadening.png?raw=true" width="90%">
 
