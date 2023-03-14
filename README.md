@@ -13,7 +13,7 @@ J.G. - Jean Gomes
 
 <hr>
 
-![python3](https://img.shields.io/pypi/pyversions/pyfluxconserving)
+![python3](https://img.shields.io/pypi/pyversions/PyKinematicalBroadening)
 
 <hr>
 
@@ -31,7 +31,7 @@ In summary, the PyKinematicalBroadening code provides a flexible way to apply ki
 
 #### <b>INSTALLATION</b>
 
-You can easily install <a href=https://pypi.org/project/PyKinematicalBroadening/>PyKinematicalBroadening</a> by using pip - <a href='https://pypi.org/'>PyPI - The Python Package Index</a>:
+You can easily install <a href='https://pypi.org/project/PyKinematicalBroadening/'>PyKinematicalBroadening</a> by using pip - <a href='https://pypi.org/'>PyPI - The Python Package Index</a>:
 
 <pre>
 pip install PyKinematicalBroadening
