@@ -188,5 +188,3 @@ Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
 
 <a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>Creative Commons Attribution-NonCommercial-NoDerivs (CC-BY-NC-ND)</a>
 
-<meta name="google-site-verification" content="b6WHo0jISXUH4ivxLDIT4L1T4BBQtBNAHSJ0VFS71tg" />
-
