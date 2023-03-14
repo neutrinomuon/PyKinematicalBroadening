@@ -150,8 +150,7 @@ PyKinematicalBroadening
 - van der Marel, R. P., & Franx, M. 1993, ApJ, 407, 525
         
 - Emsellem, E., et al. "The SAURON project - III. Integral-field absorption-line
-kinematics of 48 elliptical and lenticular galaxies." Monthly Notices of the Royal Astronomical Society, Volume 352, Issue 3, pp. 721-743. DOI:  
-<a href="https://doi.org/10.1111/j.1365-2966.2004.07948.x">10.1111/j.1365-2966.2004.07948.x</a> ; <a href="https://doi.org/10.48550/arXiv.astro-ph/0404034">10.48550/arXiv.astro-ph/0404034</a>. Available
+kinematics of 48 elliptical and lenticular galaxies." Monthly Notices of the Royal Astronomical Society, Volume 352, Issue 3, pp. 721-743. DOI: <a href="https://doi.org/10.1111/j.1365-2966.2004.07948.x">10.1111/j.1365-2966.2004.07948.x</a> ; <a href="https://doi.org/10.48550/arXiv.astro-ph/0404034">10.48550/arXiv.astro-ph/0404034</a>. Available
 at: <a href="https://ui.adsabs.harvard.edu/abs/2004MNRAS.352..721E/abstract">https://ui.adsabs.harvard.edu/abs/2004MNRAS.352..721E/abstract</a>
 
 <!--[//]: # (<il>Faber, S. M. "The Stellar Population Histories of Elliptical Galaxies: A
