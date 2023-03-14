@@ -142,9 +142,10 @@ PyKinematicalBroadening
 
 #### <b>REFERENCES</b>
 
-- Tonry, J., & Davis, M. 1979, AJ, 84, 1511
+- Tonry, J., & Davis, M. "A survey of galaxy redshifts. I. Data reduction techniques". 1979, AJ, 84, 1511. DOI: <a href="https://doi.org/10.1086/112569">10.1086/112569</a>. Available at: <a href="https://ui.adsabs.harvard.edu/abs/1979AJ.....84.1511T/abstract">https://ui.adsabs.harvard.edu/abs/1979AJ.....84.1511T/abstract</a>
 
-- van der Marel, R. P., & Franx, M. 1993, ApJ, 407, 525
+- van der Marel, R. P., & Franx, M. "A New Method for the Identification of Non-Gaussian Line Profiles in Elliptical Galaxies"
+. 1993, ApJ, 407, 525. DOI: <a href="https://doi.org/10.1086/172534">10.1086/172534</a>. Available at: <a href="https://ui.adsabs.harvard.edu/abs/1993ApJ...407..525V/abstract">https://ui.adsabs.harvard.edu/abs/1993ApJ...407..525V/abstract</a>
         
 - Emsellem, E., et al. "The SAURON project - III. Integral-field absorption-line
 kinematics of 48 elliptical and lenticular galaxies." Monthly Notices of the Royal Astronomical Society, Volume 352, Issue 3, pp. 721-743. DOI: <a href="https://doi.org/10.1111/j.1365-2966.2004.07948.x">10.1111/j.1365-2966.2004.07948.x</a> ; <a href="https://doi.org/10.48550/arXiv.astro-ph/0404034">10.48550/arXiv.astro-ph/0404034</a>. Available
