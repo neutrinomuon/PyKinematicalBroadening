@@ -3,8 +3,9 @@ email: [antineutrinomuon@gmail.com](mailto:antineutrinomuon@gmail.com), [jean@as
 
 version:
 ```text
-<!-- include the path to the text file here -->
+<!-- include version.txt file -->
 $(cat version.txt)
+```
 
 github repository: <a href='https://github.com/neutrinomuon/PyKinematicalBroadening/'>PyKinematicalBroadening</a>
 
