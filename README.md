@@ -1,7 +1,7 @@
 ### PyKinematicalBroadening
 email: [antineutrinomuon@gmail.com](mailto:antineutrinomuon@gmail.com), [jean@astro.up.pt](mailto:jean@astro.up.pt)
 
-github repository: <a href=https://'github.com/neutrinomuon/PyKinematicalBroadening/'>PyKinematicalBroadening</a>
+github repository: <a href='https://github.com/neutrinomuon/PyKinematicalBroadening/'>PyKinematicalBroadening</a>
 
 © Copyright ®
 
