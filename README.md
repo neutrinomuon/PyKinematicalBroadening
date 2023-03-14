@@ -9,7 +9,7 @@ J.G. - Jean Gomes
 
 <hr>
 
-![python3](https://img.shields.io/pypi/pyversions/PyKinematicalBroadening)
+<img src='https://img.shields.io/pypi/pyversions/PyKinematicalBroadening'>
 
 <hr>
 
@@ -35,10 +35,9 @@ pip install PyKinematicalBroadening
 
 <br>or by using a generated conda repository <a href='https://anaconda.org/neutrinomuon/PyKinematicalBroadening'>https://anaconda.org/neutrinomuon/PyKinematicalBroadening</a>:
 
-[![badgetanaconda](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/version.svg)](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/version.svg)
-[![badgetreleasedate](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/latest_release_date.svg)](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/latest_release_date.svg)
-[![badgetplatforms](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/platforms.svg
-)](https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/platforms.svg)
+<img src='https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/version.svg'>
+<img src='https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/latest_release_date.svg'>
+<img src='https://anaconda.org/neutrinomuon/PyKinematicalBroadening/badges/platforms.svg'>
 
 <pre>
 conda install -c neutrinomuon PyKinematicalBroadening
