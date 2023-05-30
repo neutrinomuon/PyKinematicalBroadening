@@ -300,58 +300,58 @@ def broadening_OLD( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=4
 
     return  fluxes_s,IsKeepOn
 
-file = 'test_spectrum.spec'
-o = open(file)
-r = o.readlines()
-o.close()
-
-l = [] ; f = []
-for i in enumerate(r):
-    i_split = i[1].split()
-    if i_split[0] != '#':
-        # print(i_split)
-        l.append(i_split[0]) ; f.append(i_split[1])
-
-l = np.array(l, dtype=float) ; f = np.array(f, dtype=float) 
-
-f = f[ (l>8000) & (l<9000) ]
-l = l[ (l>8000) & (l<9000) ]
-
-# Interpolation for equally spaced wavelength steps
-lambda_o = np.arange(8300,8901,1.)
-fluxes_o = np.interp(lambda_o,l,f)
-Nlambdao = lambda_o.size
-
-lambda_s = lambda_o
-vc0_gals = 0.0
-Ni_Gauss = 11
-vd_sigma = 0.0
-
-vd = np.arange(0.,550.,50.)
-
-n = vd.size
-colors = pl.cm.jet(np.linspace(0,1,n))
-
-# plt.xlim(3000,9000)
-plt.plot(lambda_o,fluxes_o)
-
-
-# Define the Lorentzian kernel function
-def lorentzian(x, gamma):
-    return gamma / (np.pi * (x**2 + gamma**2))
-
-def gaussian(x, amplitude, mean, stddev):
-    """Gaussian function with amplitude, mean, and standard deviation."""
-    return amplitude * np.exp(-0.5 * ((x - mean) / stddev) ** 2)
-
-vd_sigma = 250
-fluxes_s_k, IskeepOn = broadening_kernel(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, gaussian, kernel_params=[1.0,0.0,1.0], Ni_kernel=41, verbosity=0 )
-fluxes_s, IskeepOn = broadening( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=Ni_Gauss, fill_val=0.0, verbosity=0 )
-plt.plot(lambda_s,fluxes_s,linestyle='-')
-plt.plot(lambda_s,fluxes_s_k)
-
-plt.xlim(8600,8700)
-plt.ylim(0.00007,0.00013) 
+#file = 'test_spectrum.spec'
+#o = open(file)
+#r = o.readlines()
+#o.close()
+#
+#l = [] ; f = []
+#for i in enumerate(r):
+#    i_split = i[1].split()
+#    if i_split[0] != '#':
+#        # print(i_split)
+#        l.append(i_split[0]) ; f.append(i_split[1])
+#
+#l = np.array(l, dtype=float) ; f = np.array(f, dtype=float) 
+#
+#f = f[ (l>8000) & (l<9000) ]
+#l = l[ (l>8000) & (l<9000) ]
+#
+## Interpolation for equally spaced wavelength steps
+#lambda_o = np.arange(8300,8901,1.)
+#fluxes_o = np.interp(lambda_o,l,f)
+#Nlambdao = lambda_o.size
+#
+#lambda_s = lambda_o
+#vc0_gals = 0.0
+#Ni_Gauss = 11
+#vd_sigma = 0.0
+#
+#vd = np.arange(0.,550.,50.)
+#
+#n = vd.size
+#colors = pl.cm.jet(np.linspace(0,1,n))
+#
+## plt.xlim(3000,9000)
+#plt.plot(lambda_o,fluxes_o)
+#
+#
+## Define the Lorentzian kernel function
+#def lorentzian(x, gamma):
+#    return gamma / (np.pi * (x**2 + gamma**2))
+#
+#def gaussian(x, amplitude, mean, stddev):
+#    """Gaussian function with amplitude, mean, and standard deviation."""
+#    return amplitude * np.exp(-0.5 * ((x - mean) / stddev) ** 2)
+#
+#vd_sigma = 250
+#fluxes_s_k, IskeepOn = broadening_kernel(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, gaussian, kernel_params=[1.0,0.0,1.0], Ni_kernel=41, verbosity=0 )
+#fluxes_s, IskeepOn = broadening( lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=Ni_Gauss, fill_val=0.0, verbosity=0 )
+#plt.plot(lambda_s,fluxes_s,linestyle='-')
+#plt.plot(lambda_s,fluxes_s_k)
+#
+#plt.xlim(8600,8700)
+#plt.ylim(0.00007,0.00013) 
 
 # for i in enumerate(vd):
 #     # Ni_Gauss = max(51,int( i[1] ) + 1)

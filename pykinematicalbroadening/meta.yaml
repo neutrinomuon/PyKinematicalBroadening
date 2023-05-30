@@ -1,5 +1,5 @@
 {% set name = "PyKinematicalBroadening" %}
-{% set version = "0.0.8" %}
+{% set version = "0.0.9" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: b55b012f2cc45b445666679c3b0d9a72dcf6dc0cfcbe4d372ec0ab1892d34ffa
+  sha256: a5277efdabb00a3da6da8d9b263f755a80e771c829490a8e6eaff27487c2fba7
 
 build:
   number: 0

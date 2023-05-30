@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Broaden Spectrum{% endblock %}
+
+{% block content %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="document">Choose a file to upload:</label><br>
+        <input type="file" name="document" accept=".txt,.csv,.dat"><br><br>
+        <label for="lambda_s">Lambda S:</label><br>
+        <input type="number" name="lambda_s" step="0.01"><br><br>
+        <label for="vc0_gals">vc0 Gals:</label><br>
+        <input type="number" name="vc0_gals" step="0.01"><br><br>
+        <label for="vd_sigma">vd Sigma:</label><br>
+        <input type="number" name="vd_sigma" step="0.01"><br><br>
+        <label for="Ni_Gauss">Ni Gauss:</label><br>
+        <input type="number" name="Ni_Gauss"><br><br>
+        <label for="n_hermite">n Hermite:</label><br>
+        <input type="number" name="n_hermite"><br><br>
+        {% for i in range|length %}
+        <label for="coeff_hermite_{{i+1}}">Coeff Hermite {{i+1}}:</label><br>
+        <input type="number" name="coeff_hermite_{{i+1}}" step="0.01"><br><br>
+        {% endfor %}
+        <label for="fill_val">Fill Value:</label><br>
+        <input type="number" name="fill_val" step="0.01"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

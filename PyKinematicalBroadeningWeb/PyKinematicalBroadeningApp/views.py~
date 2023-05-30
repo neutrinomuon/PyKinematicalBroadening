@@ -1,0 +1,33 @@
+from django.shortcuts import render
+from .utils import broadening_gh
+import numpy as np
+import pandas as pd
+
+def broaden_spectrum(request):
+    if request.method == 'POST':
+        # get the uploaded file
+        uploaded_file = request.FILES['document']
+        # read the file into a pandas dataframe
+        df = pd.read_csv(uploaded_file, sep='\s+', header=None, names=['lambda_o', 'fluxes_o'])
+        # get the input parameters from the form
+        lambda_s = float(request.POST.get('lambda_s'))
+        vc0_gals = float(request.POST.get('vc0_gals'))
+        vd_sigma = float(request.POST.get('vd_sigma'))
+        Ni_Gauss = int(request.POST.get('Ni_Gauss'))
+        n_hermite = int(request.POST.get('n_hermite'))
+        coeff_hermite = [float(request.POST.get(f'coeff_hermite_{i+1}')) for i in range(n_hermite)]
+        fill_val = float(request.POST.get('fill_val'))
+        # run the broadening function
+        lambda_o = np.array(df['lambda_o'])
+        fluxes_o = np.array(df['fluxes_o'])
+        lambda_s = lambda_s * np.ones_like(lambda_o)
+        fluxes_broad = broadening_gh(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=Ni_Gauss, n_hermite=n_hermite, coeff_hermite=coeff_hermite, fill_val=fill_val)
+        # prepare the response as a downloadable file
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="broadened_spectrum.csv"'
+        writer = csv.writer(response)
+        for row in zip(lambda_o, fluxes_broad):
+            writer.writerow(row)
+        return response
+    return render(request, 'broaden_spectrum.html')
+
