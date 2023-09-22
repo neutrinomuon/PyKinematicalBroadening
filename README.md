@@ -19,7 +19,8 @@ J.G. - Jean Gomes
 
 <img
 src="https://raw.githubusercontent.com/neutrinomuon/PyKinematicalBroadening/main/figures/PyKinematicalBroadening.png"
-width=120> PyKinematicalBroadening is a Python repository for Extragalactic
+width=120>
+PyKinematicalBroadening is a Python repository for Extragalactic
 Kinematics that performs kinematical broadening of a spectrum by convolving it
 with a kernel in velocity space, which results in a broadened model. This code
 provides a function called 'broadening,' which uses a Gaussian kernel for
