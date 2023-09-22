@@ -6,7 +6,7 @@ Revised interface on Sat Jan 30 12:07:21 2021
 @author: Jean Gomes
 
 RESUME :  Kinematical broadening of a spectrum in velocity space! Extragalactic Kinematical broadening is a repository for 
-applying a kernel in velocity space to models in order to obtain the respective broadened model.
+applying a kernel in velocity (in velocity space) to models in order to obtain the respective broadened model.
 
 Version: v01
 
@@ -24,7 +24,7 @@ from scipy.special import hermitenorm
 def broadening_gh(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41, n_hermite=2, coeff_hermite=[0.0, 0.0], fill_val=0.0, verbosity=0):
     
     c  = 2.99792458 * 100000.0
-    Pi = np.pi
+    # Pi = np.pi
     
     IsKeepOn = 1
 
@@ -39,9 +39,12 @@ def broadening_gh(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41,
 
     u_array = np.arange(ullambda,uulambda+dulambda,dulambda)
     coeff_sum = np.array([coeff_hermite[i] * hermitenorm(i)(u_array) for i in range(n_hermite)], dtype=float)
-    coeff_sum_total = 0.0
-    for i in range(n_hermite):
-        coeff_sum_total += coeff_sum[i,:]
+    
+    coeff_sum_total = np.sum(coeff_sum, axis=0)
+
+    # coeff_sum_total = 0.0
+    # for i in range(n_hermite):
+    #     coeff_sum_total += coeff_sum[i,:]
     
     # Calculate LOSVD with Gauss-Hermite series
     f_losvd_gauss_hermite = np.exp(-(u_array ** 2 / 2.0)) * (1.0 + coeff_sum_total)
@@ -51,7 +54,7 @@ def broadening_gh(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41,
         f_losvd = np.exp(-(u_array ** 2 / 2.0))
         return u_array,f_losvd,f_losvd_gauss_hermite
 
-    dlambdao = np.gradient(lambda_o)
+    # dlambdao = np.gradient(lambda_o)
     v_0_gals = vc0_gals / c
 
     if v_0_gals != 0.0:
@@ -105,7 +108,7 @@ def broadening_gh(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, Ni_Gauss=41,
 def broadening_kernel(lambda_o, fluxes_o, lambda_s, vc0_gals, vd_sigma, kernel_func, kernel_params=None, Ni_kernel=41, fill_val=0.0, verbosity=0):
 
     c = 2.99792458 * 100000.0
-    Pi = np.pi
+    # Pi = np.pi
 
     IsKeepOn = 1
 

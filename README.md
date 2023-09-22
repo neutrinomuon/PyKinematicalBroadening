@@ -17,8 +17,7 @@ J.G. - Jean Gomes
 
 #### <b>RESUME</b>
 
-<img src="https://raw.githubusercontent.com/neutrinomuon/PyKinematicalBroadening/main/figures/Kinematics.png" width=120>
-
+<img src="https://raw.githubusercontent.com/neutrinomuon/PyKinematicalBroadening/main/figures/PyKinematicalBroadening.png" width=120>
 PyKinematicalBroadening is a Python repository for Extragalactic Kinematics that performs kinematical broadening of a spectrum by convolving it with a kernel in velocity space, which results in a broadened model. This code provides a function called 'broadening,' which uses a Gaussian kernel for convolution. However, in addition to the Gaussian kernel, the code can also use Gauss-Hermite kernels for convolution.
 
 The Gauss-Hermite kernels provide a more general perspective than the Gaussian kernels, as they can account for higher-order velocity moments of the broadening process. The code defines the width and mean velocity of the kernel with vd\_sigma and vc0\_gals, respectively, while the number of points for the kernel is set with the Ni\_Gauss parameter. The output spectrum is defined at wavelengths lambda\_s and is returned as fluxes\_s. The fill\_val parameter defines the value to use for regions outside of the original wavelength range, and verbosity controls the level of detail of console output.
